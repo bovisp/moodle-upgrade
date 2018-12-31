@@ -159,4 +159,20 @@ The next page will be a list of new settings that are available in Moodle. It is
 
 Click on the `Save changes` button at the bottom of this page.
 
+## Take Moodle oput of maintinance mode
+
+Click on the `Site administration` located in the left hand side menu:
+
+![](https://github.com/bovisp/moodle-upgrade/blob/master/site_admin.png)
+
+On the `Site administration` page, click on the `Server` tab and then click on the `Maintinance mode` link:
+
+![](https://github.com/bovisp/moodle-upgrade/blob/master/maintinance_mode.png)
+
+On the `Maintinance mode` page, select `Disabled` from the `Maintinance mode` dropdown menu and then click on the green `Save changes` button:
+
+![](https://github.com/bovisp/moodle-upgrade/blob/master/maintinance_enabled.png)
+
+The site is now out of maintinance mode.
+
 And you are done!
