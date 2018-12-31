@@ -49,3 +49,24 @@ We will be using Git to download and checkout the latest version of Moodle, whic
 # and place it in the same directory as the Moodle folder
 # that you just renamed
 > sudo cp -R /opt/moodle /var/www/html/
+```
+
+## Copy over `config.php` and current theme
+
+Copy Moodle's `config.php` file from the `moodle.backup` folder to the `moodle` folder:
+
+```
+> cd /var/www/html
+> sudo cp moodle.backup/config.php moodle
+```
+
+Copy over the `TCDD Learn` theme from the `moodle.backup` folder to the `moodle` folder:
+
+```
+> sudo cp -pr moodle.backup/theme/tcdd_learn moodle/theme/tcdd_learn
+```
+
+Go back you your web browser and enter the URL of the Training Portal homepage `http://msc-educ-smc.cmc.ec.gc.ca/moodle/` to finish the upgrade process.
+
+
+```
