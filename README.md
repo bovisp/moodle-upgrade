@@ -68,5 +68,78 @@ Copy over the `TCDD Learn` theme from the `moodle.backup` folder to the `moodle`
 
 Go back you your web browser and enter the URL of the Training Portal homepage `http://msc-educ-smc.cmc.ec.gc.ca/moodle/` to finish the upgrade process.
 
+## Upgrade Moodle
+
+When you go to the Training Portal now, this is the page that you should see. Note that the version number that you are upgrading to will be different than the one displayed below:
+
+**Insert upgrade_page_one**
+
+Click on the green `Continue` button.
+
+The next page performs a server check to see if your server meets all of the minimum requirements for a server upgrade. As long as you see the message that indicates that the server meets the minum requirements, click on the green `Continue` button to proceed to the next step:
+
+**Insert upgrade_page_two**
+
+## Upgrading you plugins
+
+Now comes the very very fun part. Copying over your plugins. Onthe page after the server check page, you will land on a ridiculously long page titles `Plugins check`. The purpose of this page is to show you which plugins (either Moodle core or ones that you created and/or installed) are to be upgraded and which ones are to be deleted. It will also indicate any new plugins (as part of Moodle new core features) that will be installed.
+
+Here's the rub. Many plugins that you installed are in the old `moodle.backup` folder and must first be copied over before you can move away from this page and complete the installation. For Training Portal, there are a lot of them and it is best to pick them off one by one.
+
+Scroll down this page until you see the first plugin that is indicated as `Missing from disk`. In this case it is the `hoppot` plugin:
+
+**Insert hotpt_plugin_error**
+
+If you scroll up the page a bit, you will see that this plugin falls under the `Activity modules` group of plugins:
+
+**Insert activity_modules_heading**
+
+Look down the list of `Activity modules` plugins. Under the name of each plugin is the location of that plugin in the moodle application. In this case you will see that every `Activity module` plugin is located in the `/mod` directory:
+
+**Insert mod_dir**
+
+Scroll back down the list until you see the `hotpot` module that is missing. To copy this plugin over, you need to note down the main folder where it needs to be copied into. In this case it is `/mod`. The name of the specific plugin folder is whatever you see here:
+
+**Insert proper_plugin_folder_name**
+
+In this case it is `hotpot`. So, here is the full command you need to type. **Make sure that you are in the /var/www/html folder before you do this.**:
 
 ```
+> cd /var/www/html
+> sudo cp -R moodle.backup/mod/hotpot moodle/mod/
+```
+
+Scroll to the bottom of the page and click on the green `Refresh` link to reload the page. There should no longer be an error with the `hotpot` module.
+
+Let's do this one more time and then I'll let you figure out the rest. Scroll down the page until you see then next plugin that is missing from disk. In this case it is the `multichoiceset` question type plugin:
+
+
+**Insert multichoiceset_plugin_error**
+
+Note the location of the other `Question type` plugins. They are located at `/question/type`:
+
+**Insert question_type_dir**
+
+Scroll back down the list until you see the `multichoiceset` module that is missing. To copy this plugin over, you need to note down the main folder where it needs to be copied into. In this case it is `/question/type`. The name of the specific plugin folder is whatever you see here:
+
+**Insert proper_plugin_folder_name2**
+
+In this case it is `multichoiceset`. So, here is the full command you need to type. **Make sure that you are in the /var/www/html folder before you do this.**:
+
+```
+> cd /var/www/html
+> sudo cp -R moodle.backup/question/type/multichoiceset moodle/question/type/
+```
+
+Scroll to the bottom of the page and click on the green `Refresh` link to reload the page. There should no longer be an error with the `hotpot` module.
+
+Follow these same steps for every missing plugin until there are no errors.
+
+_Note that the local plugins that are at the bottom of this page can be found in `/local`.
+
+When there are no more plugins missing from disk, click on the grey `Upgrade Moodle database now` button to proceed to the next step:
+
+**Insert upgrade_database_now**
+
+Note that it will take a long time to load the next page.
+
