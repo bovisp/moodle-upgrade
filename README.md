@@ -80,9 +80,9 @@ The next page performs a server check to see if your server meets all of the min
 
 **Insert upgrade_page_two**
 
-## Upgrading you plugins
+## Upgrading your plugins
 
-Now comes the very very fun part. Copying over your plugins. Onthe page after the server check page, you will land on a ridiculously long page titles `Plugins check`. The purpose of this page is to show you which plugins (either Moodle core or ones that you created and/or installed) are to be upgraded and which ones are to be deleted. It will also indicate any new plugins (as part of Moodle new core features) that will be installed.
+Now comes the very very fun part. Copying over your plugins. On the page after the server check page, you will land on a ridiculously long page titled `Plugins check`. The purpose of this page is to show you which plugins (either Moodle core or ones that you created and/or installed) are to be upgraded and which ones are to be deleted. It will also indicate any new plugins (as part of Moodle new core features) that will be installed.
 
 Here's the rub. Many plugins that you installed are in the old `moodle.backup` folder and must first be copied over before you can move away from this page and complete the installation. For Training Portal, there are a lot of them and it is best to pick them off one by one.
 
@@ -135,7 +135,7 @@ Scroll to the bottom of the page and click on the green `Refresh` link to reload
 
 Follow these same steps for every missing plugin until there are no errors.
 
-_Note that the local plugins that are at the bottom of this page can be found in `/local`.
+_Note that the local plugins that are at the bottom of this page can be found in `/local`._
 
 When there are no more plugins missing from disk, click on the grey `Upgrade Moodle database now` button to proceed to the next step:
 
@@ -143,3 +143,20 @@ When there are no more plugins missing from disk, click on the grey `Upgrade Moo
 
 Note that it will take a long time to load the next page.
 
+## Finalizing upgrade
+
+You should now see the `Upgrading to new version` page that will have a list of all of the plugins that have been upgraded/installed:
+
+**Install upgrading_to_new_version**
+
+As long as there are nothing but successful green messages next to all of the plugins in the list, click on the green `Continue` button at the bottom of this page.
+
+You will now be prompted to login as administrator. Please do so now.
+
+The next page will be a list of new settings that are available in Moodle. It is **highly** recommended that you not change these settings now. Instead, take screenshots of every new setting. You can search for these later in the `Site administration` page and decided what course of action to take at that time:
+
+**Install new_settings**
+
+Click on the `Save changes` button at the bottom of this page.
+
+And you are done!
