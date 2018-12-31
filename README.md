@@ -14,11 +14,11 @@ Click on the `Site administration` located in the left hand side menu:
 
 On the `Site administration` page, click on the `Server` tab and then click on the `Maintinance mode` link:
 
-**Insert maintinance_mode**
+![](https://github.com/bovisp/moodle-upgrade/blob/master/maintinance_mode.png)
 
 On the `Maintinance mode` page, modiify the message as needed, select `Enabled` from the `Maintinance mode` dropdown menu and then click on the green `Save changes` button:
 
-**Insert maintinance_enabled**
+![](https://github.com/bovisp/moodle-upgrade/blob/master/maintinance_enabled.png)
 
 The site is now in maintinance mode. As admin, you may visit the Moodle site at any time by going to [the Moodle login page](http://msc-educ-smc.cmc.ec.gc.ca/moodle/login/index.php).
 
@@ -72,13 +72,13 @@ Go back you your web browser and enter the URL of the Training Portal homepage `
 
 When you go to the Training Portal now, this is the page that you should see. Note that the version number that you are upgrading to will be different than the one displayed below:
 
-**Insert upgrade_page_one**
+![](https://github.com/bovisp/moodle-upgrade/blob/master/upgrade_page_one.png)
 
 Click on the green `Continue` button.
 
 The next page performs a server check to see if your server meets all of the minimum requirements for a server upgrade. As long as you see the message that indicates that the server meets the minum requirements, click on the green `Continue` button to proceed to the next step:
 
-**Insert upgrade_page_two**
+![](https://github.com/bovisp/moodle-upgrade/blob/master/upgrade_page_two.png)
 
 ## Upgrading your plugins
 
@@ -88,19 +88,19 @@ Here's the rub. Many plugins that you installed are in the old `moodle.backup` f
 
 Scroll down this page until you see the first plugin that is indicated as `Missing from disk`. In this case it is the `hoppot` plugin:
 
-**Insert hotpt_plugin_error**
+![](https://github.com/bovisp/moodle-upgrade/blob/master/hotpt_plugin_error.png)
 
 If you scroll up the page a bit, you will see that this plugin falls under the `Activity modules` group of plugins:
 
-**Insert activity_modules_heading**
+![](https://github.com/bovisp/moodle-upgrade/blob/master/activity_modules_heading.png)
 
 Look down the list of `Activity modules` plugins. Under the name of each plugin is the location of that plugin in the moodle application. In this case you will see that every `Activity module` plugin is located in the `/mod` directory:
 
-**Insert mod_dir**
+![](https://github.com/bovisp/moodle-upgrade/blob/master/mod_dir.png)
 
 Scroll back down the list until you see the `hotpot` module that is missing. To copy this plugin over, you need to note down the main folder where it needs to be copied into. In this case it is `/mod`. The name of the specific plugin folder is whatever you see here:
 
-**Insert proper_plugin_folder_name**
+![](https://github.com/bovisp/moodle-upgrade/blob/master/proper_plugin_folder_name.png)
 
 In this case it is `hotpot`. So, here is the full command you need to type. **Make sure that you are in the /var/www/html folder before you do this.**:
 
@@ -114,15 +114,15 @@ Scroll to the bottom of the page and click on the green `Refresh` link to reload
 Let's do this one more time and then I'll let you figure out the rest. Scroll down the page until you see then next plugin that is missing from disk. In this case it is the `multichoiceset` question type plugin:
 
 
-**Insert multichoiceset_plugin_error**
+![](https://github.com/bovisp/moodle-upgrade/blob/master/multichoiceset.png)
 
 Note the location of the other `Question type` plugins. They are located at `/question/type`:
 
-**Insert question_type_dir**
+![](https://github.com/bovisp/moodle-upgrade/blob/master/question_type_dir.png)
 
 Scroll back down the list until you see the `multichoiceset` module that is missing. To copy this plugin over, you need to note down the main folder where it needs to be copied into. In this case it is `/question/type`. The name of the specific plugin folder is whatever you see here:
 
-**Insert proper_plugin_folder_name2**
+![](https://github.com/bovisp/moodle-upgrade/blob/master/proper_plugin_folder_name2.png)
 
 In this case it is `multichoiceset`. So, here is the full command you need to type. **Make sure that you are in the /var/www/html folder before you do this.**:
 
@@ -139,7 +139,7 @@ _Note that the local plugins that are at the bottom of this page can be found in
 
 When there are no more plugins missing from disk, click on the grey `Upgrade Moodle database now` button to proceed to the next step:
 
-**Insert upgrade_database_now**
+![](https://github.com/bovisp/moodle-upgrade/blob/master/upgrade_database_now.png)
 
 Note that it will take a long time to load the next page.
 
@@ -147,7 +147,7 @@ Note that it will take a long time to load the next page.
 
 You should now see the `Upgrading to new version` page that will have a list of all of the plugins that have been upgraded/installed:
 
-**Install upgrading_to_new_version**
+![](https://github.com/bovisp/moodle-upgrade/blob/master/upgrading_to_new_version.png)
 
 As long as there are nothing but successful green messages next to all of the plugins in the list, click on the green `Continue` button at the bottom of this page.
 
@@ -155,7 +155,7 @@ You will now be prompted to login as administrator. Please do so now.
 
 The next page will be a list of new settings that are available in Moodle. It is **highly** recommended that you not change these settings now. Instead, take screenshots of every new setting. You can search for these later in the `Site administration` page and decided what course of action to take at that time:
 
-**Install new_settings**
+![](https://github.com/bovisp/moodle-upgrade/blob/master/new_settings.png)
 
 Click on the `Save changes` button at the bottom of this page.
 
