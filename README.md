@@ -10,7 +10,7 @@ Make sure that the databases, moodledata folder and moodle application folders a
 
 Click on the `Site administration` located in the left hand side menu:
 
-**Insert site admin**
+![](https://github.com/bovisp/moodle-upgrade/blob/master/site_admin.png)
 
 On the `Site administration` page, click on the `Server` tab and then click on the `Maintinance mode` link:
 
